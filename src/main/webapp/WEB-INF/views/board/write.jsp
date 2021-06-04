@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <div id ="main">
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <!-- Page Title -->
             <div style="margin-top:20px;">
                 <i class="fa fa-comments fa-2x">자유 게시판</i>
@@ -42,16 +42,9 @@
                         <div class="form-group row">
 
                             <label class="col-2 col-form-label text-danger text-right">자동<br>입력방지</label>
-                            <img src="/img/google_recaptcha.gif" width="40%" class="col-6">
+                            <div class="g-recaptcha" data-sitekey=""
+   							data-callback="onSubmit"></div>
                             </div>
-
-                        <!-- 자동입력방지 버튼 -->
-                        <div class="form-group row">
-                            <label for="noauto" class="col-form-label col-2 text-danger text-right"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="noauto" id="noauto" class="form-control border-danger col-2 rounded">
-                            <span>&nbsp;&nbsp;&nbsp;</span>
-                            <button type="button" class="btn btn-dark"><i class="fa fa-question-circle"></i>&nbsp;다른 capcha 보기</button>
-                        </div>
 
                         <!-- 버튼들 -->
                         <div class="form-group row">

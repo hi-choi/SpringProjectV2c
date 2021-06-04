@@ -402,11 +402,34 @@ Copyright © Kakao Corp. All rights reserved.
             <div class="card card-body bg-light">
 
                 <div class="text-center">
-                    <button type="button" id="okagree" class="btn btn-success rounded col-3">모두 동의합니다.</button>
-                    <button type="button" id="noagree" class="btn btn-danger rounded col-3">동의하지 않습니다.</button>
+                    <button type="button" id="okagree" class="btn btn-success rounded col-3">
+                    <i class="fa fa-check-circle"></i>
+                    모두 동의합니다.</button>
+                    <button type="button" id="noagree" class="btn btn-danger rounded col-3">
+                    <i class="fa fa-times-circle"></i>
+                    동의하지 않습니다.</button>
                 </div>
               </div>
 
           </div>
 
       <br>
+      
+      <script>
+    // 모두 동의합니다.
+        $('#okagree').click(function(){
+
+            if($('#agree1').is(':checked')==false || $('#agree2').is(':checked')==false)
+            {
+                alert('모두 동의하세요!');
+            }
+            else location.href="/join/checkme.html";
+         });
+
+    // 동의하지 않습니다.
+        $('#noagree').click(function(){
+            location.href="/";
+        });
+
+
+    </script>
